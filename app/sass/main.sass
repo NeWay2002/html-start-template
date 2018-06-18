@@ -1,0 +1,507 @@
+@import "vars"
+// @import "sprite"
+
+// @include sprites($spritesheet-sprites)
+
+/**
+	* 1.LAYOUT
+	* 2.HEADER
+	* 3.FOOTER
+	* 4.PADDING, MARGIN
+	* 5.ELEMENTS
+	* 	5.1 Heading
+	*		5.2 Paragraph
+	*		5.3 Button, Links
+	*		5.4 Table
+	*		5.5 Slider
+	* 6.FONT
+	* 7.PAGES
+	* 	7.1 Front-Page
+	* 8.FORM
+	* 9.ANIMATION
+	* 10.MENU
+	* 11.RESPONSIVE CLASS
+	*/
+
+
+
+/* 1. LAYOUT
+	 ========================================================================== */
+
+
+html, body
+	overflow-x: hidden
+	height: 100%
+	font-size: 16px
+
+body
+	transition: 250ms
+	transition-timing-function: ease-in-out
+	font-family: 'Open Sans', sans-serif
+	font-weight: 400
+	color: $text-color
+
+img
+	display: inline-block
+	max-width: 100%
+	height: auto
+
+main
+	padding-top: 10px
+	padding-bottom: 200px
+
+svg path
+	transition: 250ms
+	transition-timing-function: ease-in-out
+
+.overflow-xa
+	overflow-x: auto
+
+.relative
+	position: relative
+
+.clearfix:after
+	content: ''
+	clear: both
+	display: table
+	font-size: 0
+	height: 0
+	line-height: 0
+	width: 100%
+	overflow: hidden
+
+
+.w20
+	max-width: 20%
+	width: 20%
+	display: inline-block
+	box-sizing: border-box
+
+.w25
+	max-width: 25%
+	width: 25%
+	box-sizing: border-box
+
+.w30
+	max-width: 30%
+	width: 30%
+	box-sizing: border-box
+
+.w70
+	max-width: 70%
+	width: 70%
+	box-sizing: border-box
+
+.w100
+	max-width: 100%
+	width: 100%
+	box-sizing: border-box
+
+
+.side-left, .side-right
+	max-width: 50%
+	width: 50%
+	display: inline-block
+	display: table-cell
+	vertical-align: middle
+	box-sizing: border-box
+
+.tc-wrapper
+	display: table-cell
+	box-sizing: border-box
+
+.tr-wrapper
+	display: table-row
+	box-sizing: border-box
+
+.table-fixed
+	table-layout: fixed
+
+.bordered-bottom
+	box-shadow: 0 4px 1px -1px #b9ac8d
+
+
+/* 2. HEADER
+	 ========================================================================== */
+
+
+
+
+.nav-fixed
+	position: fixed
+	animation: slide-down .7s
+	display: block
+	z-index: 99999
+	opacity: 1
+
+.notransparent
+	animation: slide-up .7s
+	opacity: 0
+	z-index: -1
+
+.sp-icon
+	display: inline-block
+
+
+@keyframes slide-down
+	0%
+		-webkit-transform: translateY(-100%)
+		transform: translateY(-100%)
+	to
+		-webkit-transform: translateY(0)
+		transform: translateY(0)
+
+@keyframes slide-up
+	0%
+		-webkit-transform: translateY(0)
+		transform: translateY(0)
+	to
+		-webkit-transform: translateY(-100%)
+		transform: translateY(-100%)
+
+
+
+/* 3. FOOTER
+	 ========================================================================== */
+
+
+
+/* 4. PADDING, MARGIN
+	 ========================================================================== */
+
+.mb125
+	margin-bottom: 125px
+.mb100
+	margin-bottom: 100px
+.mb80
+	margin-bottom: 80px
+.mb65
+	margin-bottom: 65px
+.mb60
+	margin-bottom: 60px
+.mb55
+	margin-bottom: 55px
+.mb50
+	margin-bottom: 50px
+.mb40
+	margin-bottom: 40px
+.mb35
+	margin-bottom: 35px
+.mb24
+	margin-bottom: 24px
+.mr28
+	margin-right: 28px
+.mr25
+	margin-right: 25px
+.mr15
+	margin-right: 15px
+
+
+
+
+/* 5. ELEMENTS
+	 ========================================================================== */
+
+/***********5.1 HEADING************/
+
+h1
+	font-size: 1.125rem
+	font-weight: 700
+	text-transform: uppercase
+	color: #181b1f
+	font-family: "Open Sans", sans-serif
+	line-height: 1.33em
+	margin-bottom: 50px
+	letter-spacing: 1px
+
+h2
+	font-size: 1rem
+	font-weight: 700
+	text-transform: uppercase
+	color: #2a3139
+	font-family: "Open Sans", sans-serif
+	line-height: 1.3em
+	margin-bottom: 50px
+	letter-spacing: 1px
+
+.main-title
+	color: $accent-dark
+	font-family: "Open Sans", sans-serif
+	font-size: 1.875rem
+	font-weight: 700
+	text-transform: uppercase
+	text-align: center
+	line-height: 1.3
+	letter-spacing: 2px
+
+.sub-main-title
+	color: $accent-main
+	font-family: "Open Sans", sans-serif
+	font-size: 1rem
+	font-weight: 700
+	text-align: center
+	line-height: 1.3
+	letter-spacing: 1px
+
+/***************5.2 PARAGRAPH**************/
+
+p
+	font-size: 1rem
+	font-weight: 400
+	color: $text-color
+	font-family: 'Open Sans', sans-serif
+	line-height: 1.5em
+	margin-bottom: 10px
+
+
+/***********5.3 BUTTON, LINKS**************/
+
+a
+	transition: 250ms
+	transition-timing-function: ease-in-out
+	color: $text-color
+
+.load_more-container
+	text-align: center
+	a
+		display: inline-block
+		font-size: 1rem
+		letter-spacing: 0.5px
+		color: $accent-main
+		text-decoration: underline
+		&:hover, &:focus
+			text-decoration: none
+
+.btn
+	display: inline-block
+	user-select: none
+	text-decoration: none
+	white-space: nowrap
+	touch-action: manipulation
+	cursor: pointer
+	transition: 250ms
+	transition-timing-function: ease-in-out
+	&:hover, &:focus
+		text-decoration: none
+
+.btn-transparent
+	background-color: transparent
+	border: 1px solid $accent-light
+	border-radius: 4px
+	color: $accent-light
+	font-family: "MyriadPro"
+	font-size: 0.75rem
+	font-weight: 400
+	letter-spacing: 1px
+	line-height: 1
+	text-transform: uppercase
+	padding: 0.5em 1em
+	&:hover
+		background-color: $accent-light
+		color: #fff
+
+
+
+/************5.4 TABLE*************/
+
+
+/************5.5 SLIDER*************/
+.swiper-container-index-page
+	width: auto
+	height: 365px
+	margin: 0 auto
+	position: relative
+	overflow: hidden
+	list-style: none
+	padding: 0
+	z-index: 1
+	.swiper-slide
+		img 
+			width: 100%
+			max-width: 100%
+			height: auto
+
+
+
+
+/* 6. FONT
+	 ========================================================================== */
+
+.text-color-light
+	color: $accent-light
+
+.text-color-dark
+	color: $accent-dark
+
+.text-color-main
+	color: $accent-main
+
+.text-highlight
+	color: $highlight
+
+.nowrap
+	white-space: nowrap
+
+.text-weak
+	color: #d5dcde
+
+.table-weak
+	color: #777c82
+
+.text-center
+	text-align: center
+
+.text-left
+	text-align: left
+
+.text-right
+	text-align: right
+
+.text-bold
+	font-weight: 600
+
+.text-red
+	color: red
+
+.text-uppercase
+	text-transform: uppercase
+
+.text-line-through
+	text-decoration: line-through
+
+/* 7. PAGES
+	 ========================================================================== */
+
+/************7.1 FRONT-PAGE*************/
+
+
+
+
+
+
+/* 8. FORM
+	 ========================================================================== */
+input[type=search]::-ms-clear
+	display: none
+	width: 0
+	height: 0
+input[type=search]::-ms-reveal
+	display: none
+	width: 0
+	height: 0
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration
+	display: none
+
+.search_form
+	width: 100%
+	max-width: 211px
+	height: 26px
+	display: inline-block
+	.search_form-box
+		width: 100%
+		position: relative
+		&:after
+			content: url('data:image/svg+xml;utf8, <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 30.16 30.126" enable-background="new 0 0 30.16 30.126" xml:space="preserve"> <g> <path fill="%236fb50a" d="M12.801,25.568c2.848,0,5.496-0.972,7.64-2.547l7.104,7.104l2.614-2.614l-7.104-7.071 c1.575-2.145,2.547-4.758,2.547-7.64C25.602,5.73,19.872,0,12.834,0S0,5.764,0,12.801C0,19.838,5.764,25.568,12.801,25.568z M12.801,3.686c5.026,0,9.081,4.055,9.081,9.082c0,5.026-4.055,9.115-9.081,9.115c-5.027,0-9.115-4.055-9.115-9.081 C3.686,7.774,7.808,3.686,12.801,3.686z"/> </g> </svg>')
+			position: absolute
+			width: 16px
+			height: 16px
+			display: block
+			right: 10px
+			text-align: center
+			top: 50%
+			line-height: 18px
+			transform: translateY(-50%)
+		#searchinput
+			border-radius: 4px
+			width: 100%
+			padding: 5px 10px
+			border: 1px solid $accent-light
+			outline: 0
+			font-family: "MyriadPro", sans-serif
+			font-weight: 400
+			color: #011
+			resize: none
+			display: block
+			font-size: 0.75rem
+			line-height: 1.2
+			background-color: transparent
+			padding-right: 30px
+			&::-webkit-input-placeholder
+				color: #a9afb1
+			&::-moz-placeholder
+				color: #a9afb1
+			&:-ms-input-placeholder
+				color: #a9afb1
+			&:-moz-placeholder
+				color: #a9afb1
+		#searchsubmit
+			display: block
+			height: 16px
+			width: 16px
+			top: 4px
+			position: absolute
+			line-height: 18px
+			background: transparent
+			margin-right: 0
+			right: 10px
+			padding: 0
+			border: none
+			appearance: none
+			z-index: 99
+			cursor: pointer
+
+
+
+/* 9. ANIMATION
+	 ========================================================================== */
+
+.hover-transition
+	transition: 250ms
+	transition-timing-function: ease-in-out
+
+
+
+/* 10. MENU
+	 ========================================================================== */
+
+// .main_nav-container
+// 	background-color: $bg-color
+// 	padding: 4px
+// 	.main_nav
+// 		display: flex
+// 		align-items: center
+// 		li.active
+// 			a
+// 				color: #fff
+// 				background-color: $accent-main
+// 		li.highlight
+// 			a
+// 				color: $highlight
+// 		li
+// 			padding: 0 1px
+// 			a
+// 				font-weight: 700
+// 				font-size: 1rem
+// 				display: block
+// 				letter-spacing: 2px
+// 				text-transform: uppercase
+// 				color: $accent-dark
+// 				padding: 10px 7px
+// 				border-radius: 4px
+// 				&:hover, &:focus
+// 					color: #fff
+// 					background-color: $accent-main
+// 					text-decoration: none
+
+
+/* 11. RESPONSIVE CLASS
+	 ========================================================================== */
+
+
+
+
+
+
